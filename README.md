@@ -19,7 +19,7 @@ cd workshop-git
 
 ---
 
-## 3 · Funções a realizar
+## 3 · Funções a implementar
 - [ ] multiplication
 - [ ] division
 - [ ] max
