@@ -1,4 +1,5 @@
-# WORKSHOP GIT - NEIIST
+![Logótipo do NEIIST](https://neiist.tecnico.ulisboa.pt/static/media/neiist_logo.5b6bbd8f2f7eb5ee5200.png)
+# Workshop Git - NEIIST
 
 ## 1 · Fork do repositório
 
