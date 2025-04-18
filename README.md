@@ -1,1 +1,1 @@
-# workshop_git NEIIST
+# WORKSHOP GIT - NEIIST
