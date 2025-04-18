@@ -14,8 +14,8 @@ def main():
     try:
         module = importlib.import_module(f"functions.{func_name}")
         
-        first_operand = int(input("Enter first number: "))
-        second_operand = int(input("Enter second number: "))
+        first_operand = int(input("Enter first operand: "))
+        second_operand = int(input("Enter second operand: "))
         
         result = module.execute(first_operand, second_operand)
         
