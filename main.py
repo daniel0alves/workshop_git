@@ -5,9 +5,11 @@ implemented_function_list = ['add', 'sub'] #XXX
 
 def main():
     
-    print("Choose the function you want to do:")
+    print("Choose the function you want to do:\n")
+    i=0
     for f in implemented_function_list:
-        print(f"-> {f}")
+        i += 1
+        print(f"{i}) {f}")
     
     func_name = input("\n")
     
