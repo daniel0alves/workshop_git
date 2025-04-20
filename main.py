@@ -1,7 +1,8 @@
 import importlib
+from time import sleep
 
 
-implemented_function_list = ['add', 'sub'] #XXX
+implemented_function_list = ['all', 'add', 'sub'] #XXX
 
 
 def print_options():
@@ -17,8 +18,10 @@ def parse_input(input_str: str) -> str:
     
     if input_str.isnumeric():
         if input_str == '1':
-            func_name = "add"
+            func_name = "all"
         elif input_str == '2':
+            func_name = "add"
+        elif input_str == '3':
             func_name = "sub"
     
     else: func_name = input_str
@@ -33,26 +36,47 @@ def main():
         input_str = input("\n")
         
         func_name = parse_input(input_str)
+        
+        if func_name == "all": 
+            all()
+        else:
+            try:
+                module = importlib.import_module(f"functions.{func_name}")
+                
+                first_operand = int(input("Enter first operand: "))
+                second_operand = int(input("Enter second operand: "))
+                
+                result = module.execute(first_operand, second_operand)
+                
+                print(f"Result: {result}\n\n-----------")
+                input("(enter to continue)")
+                
+                
+            except ImportError:
+                print(f"Function '{func_name}' not found")
+            except ValueError:
+                print("Please enter valid numbers")
+            except Exception as e:
+                print(f"Error: {e}")
 
-        try:
-            module = importlib.import_module(f"functions.{func_name}")
-            
-            first_operand = int(input("Enter first operand: "))
-            second_operand = int(input("Enter second operand: "))
-            
-            result = module.execute(first_operand, second_operand)
-            
-            print(f"Result: {result}")
-            input()
-            
-            
-        except ImportError:
-            print(f"Function '{func_name}' not found")
-        except ValueError:
-            print("Please enter valid numbers")
-        except Exception as e:
-            print(f"Error: {e}")
 
+def all():
+    first_operand = int(input("Enter first operand: "))
+    second_operand = int(input("Enter second operand: "))
+    
+    first = True
+    for f in implemented_function_list:
+        if first:
+            first = False
+            continue
+        
+        module = importlib.import_module(f"functions.{f}")
+        result = module.execute(first_operand, second_operand)
+        
+        print(f"Result: {result}\n\n-----------")
+        sleep(0.5)
+        
+    input("All DONE! (enter to continue)\n")
 
 
 if __name__ == "__main__": main()
