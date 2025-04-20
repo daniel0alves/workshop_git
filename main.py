@@ -3,15 +3,16 @@ import importlib
 
 implemented_function_list = ['add', 'sub'] #XXX
 
-def main():
-    
+
+def print_options():
     print("Choose the function you want to do:\n")
     i=0
     for f in implemented_function_list:
         i += 1
         print(f"{i}) {f}")
-    
-    input_str: str = input("\n")
+        
+
+def parse_input(input_str: str) -> str:
     func_name: str = None
     
     if input_str.isnumeric():
@@ -21,7 +22,18 @@ def main():
             func_name = "sub"
     
     else: func_name = input_str
-            
+    
+    return func_name
+
+
+def main():
+    
+    print_options()
+    
+    input_str = input("\n")
+    
+    func_name = parse_input(input_str)
+
     try:
         module = importlib.import_module(f"functions.{func_name}")
         
