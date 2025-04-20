@@ -27,30 +27,31 @@ def parse_input(input_str: str) -> str:
 
 
 def main():
-    
-    print_options()
-    
-    input_str = input("\n")
-    
-    func_name = parse_input(input_str)
+    while(True):
+        print_options()
+        
+        input_str = input("\n")
+        
+        func_name = parse_input(input_str)
 
-    try:
-        module = importlib.import_module(f"functions.{func_name}")
-        
-        first_operand = int(input("Enter first operand: "))
-        second_operand = int(input("Enter second operand: "))
-        
-        result = module.execute(first_operand, second_operand)
-        
-        print(f"Result: {result}")
-        
-        
-    except ImportError:
-        print(f"Function '{func_name}' not found")
-    except ValueError:
-        print("Please enter valid numbers")
-    except Exception as e:
-        print(f"Error: {e}")
+        try:
+            module = importlib.import_module(f"functions.{func_name}")
+            
+            first_operand = int(input("Enter first operand: "))
+            second_operand = int(input("Enter second operand: "))
+            
+            result = module.execute(first_operand, second_operand)
+            
+            print(f"Result: {result}")
+            input()
+            
+            
+        except ImportError:
+            print(f"Function '{func_name}' not found")
+        except ValueError:
+            print("Please enter valid numbers")
+        except Exception as e:
+            print(f"Error: {e}")
 
 
 
