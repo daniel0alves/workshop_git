@@ -11,8 +11,17 @@ def main():
         i += 1
         print(f"{i}) {f}")
     
-    func_name = input("\n")
+    input_str: str = input("\n")
+    func_name: str = None
     
+    if input_str.isnumeric():
+        if input_str == '1':
+            func_name = "add"
+        elif input_str == '2':
+            func_name = "sub"
+    
+    else: func_name = input_str
+            
     try:
         module = importlib.import_module(f"functions.{func_name}")
         
