@@ -20,9 +20,31 @@ cd workshop-git
 
 ---
 
-## 3 · Funções a implementar
+## 3 · Criar branches && Funções a implementar:
 - [ ] multiplication
 - [ ] division
 - [ ] max
 - [ ] min
 - [ ] avg
+
+## 4 · Rebase
+
+## 5 · Criar branches && Implementar a seleção de funções por valores numéricos e adicionar funções à lista de funções implementadas:
+- [ ] multiplication
+- [ ] division
+- [ ] max
+- [ ] min
+- [ ] avg
+
+## 6 · Merge && Resolver Conflitos
+
+## 7 · Implementar testes para as funções
+- [ ] multiplication
+- [ ] division
+- [ ] max
+- [ ] min
+- [ ] avg
+
+## 8 · Merge Final && Resolver Conflitos && Testar se está tudo OK
+
+
