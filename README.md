@@ -18,25 +18,18 @@ git clone https://github.com/<o_teu_utilizador>/workshop-git.git # ou com ssh ke
 cd workshop-git
 ```
 
----
+## 3 · Fazer git pull
 
-## 3 · Squash dos Commits
+## 4 · Criar branches para cada feature
 
-## 4 · Criar branches && Funções a implementar:
+## 5 · Implementar a seleção de funções por valores numéricos && adicionar funções à lista de funções implementadas:
 - [ ] multiplication
 - [ ] division
 - [ ] max
 - [ ] min
 - [ ] avg
 
-## 5 · Rebase
-
-## 6 · Criar branches && Implementar a seleção de funções por valores numéricos e adicionar funções à lista de funções implementadas:
-- [ ] multiplication
-- [ ] division
-- [ ] max
-- [ ] min
-- [ ] avg
+## 6 · Fazer git push
 
 ## 7 · Merge && Resolver Conflitos
 
