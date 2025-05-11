@@ -22,7 +22,7 @@ cd workshop-git
 
 ## 4 · Criar branches para cada feature
 
-## 5 · Implementar a seleção de funções por valores numéricos && adicionar funções à lista de funções implementadas:
+## 5 · Implementar funções && seleção de funções por valores numéricos && adicionar funções à lista de funções implementadas:
 - [ ] multiplication
 - [ ] division
 - [ ] max
