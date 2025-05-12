@@ -21,19 +21,40 @@ cd workshop-git
 ## 3 · Fazer git pull
 
 ## 4 · Criar branches para cada feature
+```bash 
+git checkout -b <branch_name>
+```
 
-## 5 · Implementar funções && seleção de funções por valores numéricos && adicionar funções à lista de funções implementadas:
+## 5.1 · Implementar funções na diretoria ```functions```:
 - [ ] multiplication
 - [ ] division
 - [ ] max
 - [ ] min
 - [ ] avg
 
-## 6 · Fazer git push
-
+## 5.2 · Adicionar funções novas à lista e ao parser em ```main.py```:
+- [ ] multiplication
+- [ ] division
+- [ ] max
+- [ ] min
+- [ ] avg
+      
+## 6 · Fazer add, commit, push
+```bash 
+git add -A  # recomenda-se sempre a fazer git status para ver se há algo fora do comum
+git commit -m "feat: Implemented <feature>"
+git push
+# caso o branch não esteja na núvem fazer:
+git push --set-upstream origin <branch_name>
+```
 ## 7 · Merge && Resolver Conflitos
+```bash
+git pull
+git checkout master ou main
+git merge <branch_name>
+```
 
-## 8 · Implementar testes para as funções
+## 8 · Adicionar testes das novas funcionalidades em ```tests/test_functions.py```:
 - [ ] multiplication
 - [ ] division
 - [ ] max
