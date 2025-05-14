@@ -1,4 +1,4 @@
-def max(a, b):
+def execute(a, b):
     if( a > b):
         return a
     else:
