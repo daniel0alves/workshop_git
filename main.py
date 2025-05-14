@@ -2,7 +2,7 @@ import importlib
 from time import sleep
 
 
-implemented_function_list = ['all', 'add', 'sub'] #XXX
+implemented_function_list = ['all', 'add', 'sub', 'division'] #XXX
 
 
 def print_options():
@@ -23,6 +23,9 @@ def parse_input(input_str: str) -> str:
             func_name = "add"
         elif input_str == '3':
             func_name = "sub"
+        elif input_str == '5':
+            func_name = "division"
+        
     
     else: func_name = input_str
     
