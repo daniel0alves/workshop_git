@@ -24,7 +24,7 @@ def parse_input(input_str: str) -> str:
         elif input_str == '3':
             func_name = "sub"
         elif input_str == '5':
-            func_name = "division"
+            func_name = "division" 
         
     
     else: func_name = input_str
